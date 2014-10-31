@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|PT+Sans+Caption)
+$colorArr: #076cb4 #076cb4 #e66761 #7e7da7 #fed501 #adcce9 #46866e
+section
+  min-width: 970px
+  min-height: 750px
+.inner
+  @extend .container
+  @extend .text
+
+.wideblock
+  @extend .container-fluid
+
+.text
+  padding: 20px 0 0 0
+  h1
+    font-family: 'PT Sans Narrow', sans-serif
+    font-size: 45px
+    margin-top: 0
+
+  h2
+    font-family: 'PT Sans Narrow', sans-serif
+    font-size: 30px
+    padding: 0
+    margin: 0
+
+.about
+  background-color: nth($colorArr, 2)
+  color: #f5f5f5
+
+.domofone
+  background-color: nth($colorArr, 4)
+  color: #ffffff
+  .content
+    padding-top: 40px
+    a
+      display: block
+      position: relative
+      text-decoration: none
+      color: #ffffff
+      outline: none
+
+
+      &.active:after
+        content: ''
+        width: 180px
+        height: 41px
+        background: transparent url('../img/active.png') no-repeat top center
+        position: absolute
+        padding: 0
+        margin: 0
+        top: 100%
+        left: 50%
+        transform: translate(-50%, 23px)
+      &.active .name_p
+        display: none
+
+      &:hover .rblock
+        border: 7px solid #727197
+        & img
+          transform: translate(-50%, -52%)
+        //&:after
+        //  display: block
+        //  z-index: 0
+        //  content: ' '
+        //  width: 200px
+        //  height: 200px
+        //  position: absolute
+        //  padding: 0
+        //  margin: 0
+        //  top: -10px
+        //  left: -10px
+        //  border-radius: 20%
+        //  background-color: rgba(0,0,0,0.1)
+
+      &.active .rblock
+        border: 7px solid #68678a
+
+        &:before
+          //display: block
+          //z-index: 5
+          //content: ' '
+          //width: 190px
+          //height: 190px
+          //
+          //position: absolute
+          //padding: 0
+          //margin: 0
+          //top: -5px
+          //left: -5px
+          //border-radius: 50%
+          //background-color: rgba(0,0,0,0.5)
+
+    .item
+      @extend .col-xs-3
+      .rblock
+        z-index: 100
+        width: 180px
+        height: 180px
+        border-radius: 50%
+        background-color: #ffffff
+        margin: auto
+        position: relative
+
+        img
+          position: absolute
+          z-index: 100
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          display: block
+
+
+  .name_p
+    @extend .text-nowrap
+    font-family: 'PT Sans', sans-serif
+    font-size: 20px
+    text-align: center
+    width: 100%
+    padding-top: 10px
+  .list_p
+    dt
+      img
+        float: left
+    dd
+      padding-left: 120px
+    dd:after
+      @extend .clearfix
+    h3
+      font-size: 18px
+      font-family: 'PT Sans Narrow', sans-serif
+      margin: 0
+
+
+
+
+
+.infoblock
+  @extend .wideblock
+  background: #ffffff url('../img/shadow.png') repeat-x top center
+  color: #444444
+
+.map
+  background-color: nth($colorArr, 5)
+  color: #ffffff
